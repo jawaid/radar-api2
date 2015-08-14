@@ -18,8 +18,16 @@ install:
     - npm install
 
 script:
-    - grunt
+#    - grunt
 
 after_script:
-    - ./node_modules/.bin/istanbul cover grunt -- -u tdd
-    - ./node_modules/.bin/istanbul report cobertura --dir  ./shippable/codecoverage/
+#    - ./node_modules/.bin/istanbul cover grunt -- -u tdd
+#    - ./node_modules/.bin/istanbul report cobertura --dir  ./shippable/codecoverage/
+notifications:
+    email:
+        recipients:
+            - jekram@yahoo.com
+            - jekram@hotmail.com
+            - jawaid@shippable.com
+        on_success: always
+        on_failure: always
